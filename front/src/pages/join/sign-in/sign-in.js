@@ -16,7 +16,7 @@ export default function SignInPage() {
             <Link href="/join/forgot-password">
               <a>¿Olvidaste tu contraseña?</a>
             </Link>
-            <Link href="/join/sign-up">
+            <Link href="./sign-up">
               <a>¿No tienes una cuenta?</a>
             </Link>
           </div>
