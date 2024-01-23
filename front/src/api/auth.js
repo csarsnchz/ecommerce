@@ -19,6 +19,8 @@ export class Auth {
                 throw result;
             }
 
+            return result;
+
         } catch (error) {
             throw error;
         }
@@ -41,6 +43,8 @@ export class Auth {
             if (response.statusCode !== 200) {
                 throw result;
             }
+
+            return result;
     
         } catch (error) {
             throw error;

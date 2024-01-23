@@ -11,10 +11,8 @@ export function initialValues() {
 }
 
 export function validationSchema() {
-  return (
-    Yup.object({
+  return Yup.object({
       identifier: Yup.string().required(true),
       password: Yup.string().required(true),
-    })
-  );
+    });
 }

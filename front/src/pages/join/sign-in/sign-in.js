@@ -13,9 +13,9 @@ export default function SignInPage() {
           <LoginForm />
           
           <div className={styles.actions}>
-            <Link href="/join/forgot-password">
-              <a>¿Olvidaste tu contraseña?</a>
-            </Link>
+           {/*  <Link href="/join/forgot-password">
+                  <a>¿Olvidaste tu contraseña?</a>
+                </Link> */}
             <Link href="./sign-up">
               <a>¿No tienes una cuenta?</a>
             </Link>
