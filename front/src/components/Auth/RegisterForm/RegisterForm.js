@@ -1,4 +1,4 @@
-import { Form, FormField } from 'semantic-ui-react';
+import { Form } from 'semantic-ui-react';
 import { useFormik } from "formik";
 import { initialValues, validationSchema} from "./RegisterForm.form";
 import { Auth } from "@/api";
@@ -9,6 +9,7 @@ const authCtrl = new Auth();
 export function RegisterForm() {
 
   const router = useRouter();
+
   const formik = useFormik({
     initialValues: initialValues(),
     validationSchema: validationSchema(),
@@ -41,7 +42,7 @@ export function RegisterForm() {
             <Form.Input name="passwordConfirmation" type="password" placeholder="Password Confirmation" value={formik.values.passwordConfirmation} onChange={formik.handleChange} error={formik.errors.passwordConfirmation}/>
         </Form.Group>
 
-        <Form.Button type="submit" fluid loading={FormField.isSubmitting}>Register</Form.Button>    
+        <Form.Button type="submit" fluid loading={formik.isSubmitting}>Register</Form.Button>    
       </Form>
     </>
   );
