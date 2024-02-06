@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import { Container, Image, Button } from 'semantic-ui-react';
-import styles from './Footer.module.css';
+import styles from './Footer.module.scss';
 
 export function Footer() {
   return (
     <div className={styles.footer}>
-        <Container>
+        <Container className={styles.columns}>
             <div>
                 <Link href="/">
                     <Image src="images/logo.png" alt="gaming" />
@@ -19,7 +19,7 @@ export function Footer() {
                     <Link href="/about-us"></Link>
                 </ul>
             </div>
-            <div className={styles.socila}>
+            <div className={styles.social}>
                 <Button as="a" href="#" circular color="facebook" icon="facebook" />
                 <Button as="a" href="#" circular color="twitter" icon="twitter" />
                 <Button as="a" href="#" circular color="instagram" icon="instagram" />

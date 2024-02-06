@@ -1,6 +1,6 @@
 import { Container } from 'semantic-ui-react';
 import classNames from 'classnames';
-import styles from './BasicLayout.module.css';
+import styles from './BasicLayout.module.scss';
 import { TopBar, Footer } from '@/components/Layout';
 
 

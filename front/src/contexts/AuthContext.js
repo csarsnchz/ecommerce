@@ -9,7 +9,8 @@ export function AuthProvider(props) {
     const { children } = props;
     
     const [user, setUser] = useState(null);
-    const [accessToken, setAccessToken] = useState(null);
+    const [token, setAccessToken] = useState(null);
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
         (async () => {
             const token = tokenCtrl.getToken();
@@ -30,22 +31,16 @@ export function AuthProvider(props) {
         try {
             tokenCtrl.setToken(token);
             const response = await userCtrl.getMe();
-            setUser(response)
+            setUser(response);
+            console.log('token', token);
             setAccessToken(token);
             setLoading(false);
         } catch (error) {
             console.log(error);
             setLoading(false);
         }
-    }    
-    const data = {
-        accessToken: accessToken,
-        user: user,
-        login: login,
-        logout: logout,
-        updateUser: updateUser,
-    };
-
+    }   
+    
     const logout = () => {
         tokenCtrl.removeToken();
         setUser(null);
@@ -56,12 +51,21 @@ export function AuthProvider(props) {
         setUser(
             {
                 ...user, 
-                [key]: value
+                [key]: value,
             });
     }
+    
+    const data = {
+        accessToken: token,
+        user,
+        login,
+        logout,
+        updateUser,
+    };
 
-    if (loading) return <p>Loading...</p>;
+    if (loading) return null;
 
+    
     return (
         <AuthContext.Provider value={data}>
            {children}

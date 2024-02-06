@@ -1,6 +1,6 @@
-import { Link } from "next/link";
+import Link from "next/link";
 import { JoinLayout } from "@/layouts"
-import styles from "./sing-in.module.scss";
+import styles from "./sign-in.module.scss";
 import { LoginForm } from "@/components/Auth";
 
 export default function SignInPage() {
@@ -13,11 +13,8 @@ export default function SignInPage() {
           <LoginForm />
           
           <div className={styles.actions}>
-            <Link href="/join/forgot-password">
-              <a>¿Olvidaste tu contraseña?</a>
-            </Link>
             <Link href="./sign-up">
-              <a>¿No tienes una cuenta?</a>
+              ¿No tienes una cuenta?
             </Link>
           </div>
       </div>

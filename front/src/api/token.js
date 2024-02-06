@@ -3,6 +3,7 @@ import jwtDecode from 'jwt-decode';
 
 export class Token {
     setToken(token) {
+        console.log('token', token);
         localStorage.setItem(ENV.TOKEN, token);
     }
 
@@ -13,7 +14,7 @@ export class Token {
     hasExpired( token ) {
         const tokenDecoded = jwtDecode(token);
         const expired = tokenDecoded.exp * 1000;
-        const now = new Date().getTime;
+        const now = new Date().getTime();
         if (now > expired) {
             return true;
         }
