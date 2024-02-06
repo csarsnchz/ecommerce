@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { JoinLayout } from "@/layouts";
-import {} from "@/components/Auth";
 import styles from "./sign-up.module.scss";
 import { RegisterForm } from "@/components/Auth";
 
@@ -8,7 +7,7 @@ export default function SignUpPage() {
   return (
     <>
       <JoinLayout>
-        <div className={styles.signIn}>
+        <div className={styles.signUp}>
           <h3>Crear cuenta</h3>
           <RegisterForm />
 
@@ -16,8 +15,6 @@ export default function SignUpPage() {
             <Link href="./sign-in">
               Atrás
             </Link>
-            
-            <button>Crear cuenta</button>
           </div>
         </div>
       </JoinLayout>  

@@ -1,15 +1,14 @@
-import { Form } from 'semantic-ui-react';
+import { Form, FormField } from 'semantic-ui-react';
 import { useFormik } from "formik";
-import { initialValues, validationSchema} from "./RegisterForm.form";
-import { Auth } from "@/api";
 import { useRouter } from "next/router";
+import { Auth } from "@/api";
+import { initialValues, validationSchema} from "./RegisterForm.form";
 
 const authCtrl = new Auth();
 
 export function RegisterForm() {
 
   const router = useRouter();
-
   const formik = useFormik({
     initialValues: initialValues(),
     validationSchema: validationSchema(),
@@ -18,7 +17,7 @@ export function RegisterForm() {
       console.log("Form Sent: ", formValue);
       try {
         await authCtrl.register(formValue);
-        router.push("/join/sign-in");
+        router.push("/sign-in");
       } catch (error) {
         throw error;
       }
@@ -27,7 +26,7 @@ export function RegisterForm() {
 
 
   return (
-    <>
+<>
       <Form onSubmit={formik.handleSubmit}>
         <Form.Group width="equal">
             <Form.Input name="email" type="text" placeholder="Email Address" value={formik.values.email} onChange={formik.handleChange} error={formik.errors.email}/>
@@ -42,8 +41,8 @@ export function RegisterForm() {
             <Form.Input name="passwordConfirmation" type="password" placeholder="Password Confirmation" value={formik.values.passwordConfirmation} onChange={formik.handleChange} error={formik.errors.passwordConfirmation}/>
         </Form.Group>
 
-        <Form.Button type="submit" fluid loading={formik.isSubmitting}>Register</Form.Button>    
+        <Form.Button type="submit" fluid loading={FormField.isSubmitting}>Register</Form.Button>    
       </Form>
-    </>
+</>
   );
 }
