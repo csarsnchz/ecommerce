@@ -3,50 +3,50 @@
 .footer {
   background-color: $background-tertiary;
   padding: 30px 0;
-}
 
-.columns {
-  display: flex;
-  justify-content: space-between;
-  
-  > div {
-    width: 33.33%;
 
-    >a > img {
-      width: 150px;
-    }
-
-    > ul {
+    .columns {
       display: flex;
-      flex-direction: column;
-      gap: 5px;
-      padding: 0;
-      margin: 0;
+      justify-content: space-between;
+      
+      > div {
+        width: 33.33%;
 
-      > li {
-        margin-bottom: 10px;
+        >a > img {
+          width: 150px;
+        }
+
+        > ul {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          padding: 0;
+          margin: 0;
+
+          > li {
+            margin-bottom: 10px;
+          }
+        }
+
+        &.social {
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-start;
+          
+            > a {
+                margin-left: 10px;
+            }
+        }
       }
     }
 
-    &.social {
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-start;
-      
-        > a {
-            margin-left: 10px;
-        }
+  .copyrigth {
+    padding-top: 20px;
+    margin-top: 30px;
+    border-top: 1px solid $border-primary;
+
+    > span {
+      color: $text-secondary;
     }
   }
 }
-
-.copyrigth {
-  padding-top: 20px;
-  margin-top: 30px;
-  border-top: 1px solid $border-primary;
-
-  > span {
-    color: $text-secondary;
-  }
-}
-

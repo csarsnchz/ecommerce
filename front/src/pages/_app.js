@@ -6,7 +6,7 @@ export default function App(props) {
   const { Component, pageProps } = props;
   return (
     <AuthProvider>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </AuthProvider>
   );
 }

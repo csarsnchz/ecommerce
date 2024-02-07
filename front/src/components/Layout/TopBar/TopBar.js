@@ -10,7 +10,7 @@ export function TopBar(props) {
     <div className={styles.topBar}>
         <div className={styles.left}>
             <Link href="/">
-                <Image src="/images/logo.png" alt="Gaming" width={100} height={100} />  
+                <Image src="/images/logo.png" alt="Gaming"/>  
             </Link>
         </div>
         <div className={styles.center}>
