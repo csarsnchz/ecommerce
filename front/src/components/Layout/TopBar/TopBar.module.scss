@@ -5,24 +5,24 @@
     width: 100%;
     padding: 20px;
     z-index: 5;
-}
-
-.left {
+  }
+  
+  .left {
     width: 20%;
+  
     img {
-        height: 30px;
+      height: 30px;
     }
-}
-
-.center {
+  }
+  
+  .center {
     width: 60%;
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-.right {
+  }
+  
+  .right {
     width: 20%;
     display: flex;
     justify-content: flex-end;
-}
+  }

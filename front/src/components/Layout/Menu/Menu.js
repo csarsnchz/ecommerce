@@ -5,6 +5,7 @@ import styles from './Menu.module.scss';
 import { map } from 'lodash';
 import classNames from 'classnames';
 import { Platform } from '@/api';
+import { ENV } from '@/utils';
 
 const platformCtrl = new Platform();
 
@@ -30,7 +31,7 @@ export function Menu(props) {
     <div className={styles.platforms}>
         {map(platforms, (platform) => (
             <Link key={platform.id} href={`/games/${platform.attributes.slug}`} className={styles.platform}>
-                <Image src={platform.attributes.icon.data.attributes.url} alt={platform.attributes.tittle} />
+                <Image src={`${ENV.UPLOADS_URL}${platform.attributes.icon.data.attributes.url}`} alt={platform.attributes.tittle} />
                 <span>{platform.attributes.title}</span>
             </Link>
         ))}

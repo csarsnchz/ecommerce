@@ -8,7 +8,6 @@ export class Platform {
             const url = `${ENV.API_URL}/${ENV.ENDPOINTS.PLATFORM}?${populate}&${sort}`;
             const response = await fetch(url);
             const result = await response.json();
-
             if (response.status !== 200) {
                 return result;
             }

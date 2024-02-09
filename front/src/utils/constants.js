@@ -1,6 +1,7 @@
 export const ENV = {
     SERVER_HOST: "https://ideal-robot-776p764xqr73wrxp-3000.app.github.dev/",
     API_URL: "https://ideal-robot-776p764xqr73wrxp-1337.app.github.dev/api",
+    UPLOADS_URL: "https://ideal-robot-776p764xqr73wrxp-1337.app.github.dev",
     ENDPOINTS: {
       AUTH: {
         REGISTER: "auth/local/register",
