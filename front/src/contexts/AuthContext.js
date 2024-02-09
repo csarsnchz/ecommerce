@@ -32,7 +32,6 @@ export function AuthProvider(props) {
             tokenCtrl.setToken(token);
             const response = await userCtrl.getMe();
             setUser(response);
-            console.log('token', token);
             setAccessToken(token);
             setLoading(false);
         } catch (error) {

@@ -16,7 +16,7 @@ export class Auth {
             const result = await response.json();
 
             if (response.statusCode !== 200) {
-                throw result;
+                return result;
             }
 
             return result;
@@ -41,7 +41,7 @@ export class Auth {
             const result = await response.json();
     
             if (response.statusCode !== 200) {
-                throw result;
+                return result;
             }
 
             return result;

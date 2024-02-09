@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Image, Icon, Input, Button } from 'semantic-ui-react';
+import { Image, Icon, Input } from 'semantic-ui-react';
 import Link from 'next/link';
 import styles from './Menu.module.scss';
 import { map } from 'lodash';
@@ -35,9 +35,9 @@ export function Menu(props) {
             </Link>
         ))}
 
-        <Button className={styles.search} onClick={handleSearch}>
+        <button className={styles.search} onClick={handleSearch}>
             <Icon name="search" />
-        </Button>
+        </button>
 
         <div className={classNames(styles.inputContainer, {[styles.active]: searchActive})}>
             <Input

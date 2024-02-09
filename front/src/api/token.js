@@ -1,5 +1,5 @@
 import { ENV } from '@/utils';
-import jwtDecode from 'jwt-decode';
+import { jwtDecode } from "jwt-decode";
 
 export class Token {
     setToken(token) {
@@ -11,7 +11,7 @@ export class Token {
         return localStorage.getItem(ENV.TOKEN);
     }
 
-    hasExpired( token ) {
+    hasExpired(token) {
         const tokenDecoded = jwtDecode(token);
         const expired = tokenDecoded.exp * 1000;
         const now = new Date().getTime();

@@ -14,7 +14,7 @@ export function Account() {
   const goToAccount = () => router.push('/account');
   const goToCart = () => {
     if (!user) {
-      router.push('/join/sign-in');
+      router.push('./sign-in');
     } else {
       router.push('/cart');
     }
